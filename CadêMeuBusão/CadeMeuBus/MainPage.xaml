@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Cadê Meu Busão"
+             x:Class="CadeMeuBus.MainPage">
+
+    <AbsoluteLayout>
+        <FlexLayout IsVisible="True" JustifyContent="SpaceEvenly" Direction="Column" AlignItems="Center" Margin="30,0,30,0" >
+            <!-- Place new controls here -->
+            <Image Source="logo.png" HeightRequest="140" WidthRequest="140" FlexLayout.AlignSelf="Center" BackgroundColor="Transparent" />
+
+            <Label Text="Login" HorizontalOptions="Center" FontSize="Medium" TextColor="Black"/>
+
+            <Entry x:Name="txtUsuario" Placeholder="Usuário" PlaceholderColor="Gray"
+                   FontSize="Medium" FlexLayout.AlignSelf="Stretch" HorizontalOptions="CenterAndExpand" ReturnType="Next"/>
+
+            <Entry x:Name="txtSenha" Placeholder="Senha" PlaceholderColor="Gray"
+                  FontSize="Medium" FlexLayout.AlignSelf="Stretch" HorizontalOptions="CenterAndExpand" ReturnType="Next" IsPassword="True" />
+
+            <Button x:Name="btnLogin" Text="Login" Clicked="BtnLogin_Clicked"
+                    FontSize="Medium" TextColor="White" BorderColor="Black" BackgroundColor="#00b33c"
+                    CornerRadius="5" FlexLayout.AlignSelf="Stretch" HorizontalOptions="CenterAndExpand"/>
+
+            <Button x:Name="btnRegistrar" Text="Registrar" Clicked="BtnRegistrar_Clicked"
+                    FontSize="Medium" TextColor="White" BorderColor="Black" BackgroundColor="BlueViolet"
+                    CornerRadius="5" FlexLayout.AlignSelf="Stretch" HorizontalOptions="CenterAndExpand"/>
+
+        </FlexLayout>
+    </AbsoluteLayout>
+
+</ContentPage>

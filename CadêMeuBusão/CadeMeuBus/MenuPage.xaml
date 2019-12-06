@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             mc:Ignorable="d"
+             xmlns:model="clr-namespace:CadeMeuBus.Model"
+             Title="Menu" BackgroundColor="White"
+             x:Class="CadeMeuBus.MenuPage">
+    
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid BackgroundColor="DodgerBlue"
+                      HeightRequest="100"
+                      RowSpacing="15"
+                      x:Name="layout"
+                      ColumnSpacing="15"
+                      HorizontalOptions="FillAndExpand"
+                      Padding="20,50,20,20"
+                      VerticalOptions="Start">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+
+                                <controls:CircleImage Source="user.jpg"
+                                          BorderColor="Black"
+                                          BorderThickness="1"
+                                          Aspect="AspectFill"
+                                          WidthRequest="70"
+                                          HeightRequest="70"
+                                          HorizontalOptions="Center"
+                                          Grid.Row="0"
+                                          Grid.RowSpan="2"
+                                          Grid.Column="0"/>
+
+                <Label Text="Bem Vindo!"
+                           VerticalOptions="EndAndExpand"
+                           Grid.Row="0" 
+                           Grid.Column="1"
+                           TextColor="Black" 
+                           Style="{StaticResource HeaderMenuLabel}"
+                           FontAttributes="Bold"  />
+
+              
+
+            </Grid>
+
+            <StackLayout  Padding="20,20,0,0" Spacing="20" BackgroundColor="White">
+                <Label TextColor="Black" Text="Horários e Itinerários" Style="{StaticResource MenuLabel}">
+                    <Label.GestureRecognizers>
+                    <TapGestureRecognizer
+                                 Tapped="TapGestureRecognizer_Tapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                
+                
+                <Label TextColor="Black" Text="Comprar Passagem" Style="{StaticResource MenuLabel}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                                 Tapped="TapGestureRecognizer_Tapped_2"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                
+                
+                
+                <Label TextColor="Black" Text="Denúncias" Style="{StaticResource MenuLabel}">
+                        
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                                 Tapped="TapGestureRecognizer_Tapped_1"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label TextColor="Black" Text="Configurações" Style="{StaticResource MenuLabel}" />
+                <Label TextColor="Black" Text="Sobre" Style="{StaticResource MenuLabel}" />
+
+ 
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

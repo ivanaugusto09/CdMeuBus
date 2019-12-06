@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Cadê Meu Busão"
+             x:Class="CadeMeuBus.Problemas">
+    
+    <Grid BackgroundColor="DeepSkyBlue" RowSpacing="15" ColumnSpacing="25" Padding="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition   Width="*"/>
+            <ColumnDefinition   Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label FontSize="40" FontAttributes="Bold" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+               Grid.RowSpan="3"   Grid.ColumnSpan="2" Text="Que tipo de problema você quer relatar?"/>
+
+        <Button x:Name="p1" Text="Problema com ônibus" BackgroundColor="DeepSkyBlue" Grid.Row="3" Grid.Column="0" TextColor="Black" 
+                FontSize="12" BorderRadius="50" BorderColor="Black" BorderWidth="1" Clicked="Button_Clicked"/>
+
+        <Button Text="Problema no Trânsito" BackgroundColor="DeepSkyBlue" Grid.Row="3" Grid.Column="1" TextColor="Black" 
+                FontSize="12" BorderRadius="50" BorderColor="Black" BorderWidth="1" Clicked="Button_Clicked_1"/>
+
+        <Button Text="Problema em um ponto" BackgroundColor="DeepSkyBlue" Grid.Row="4" Grid.Column="0" TextColor="Black" 
+                FontSize="12" BorderRadius="50" BorderColor="Black" BorderWidth="1" Clicked="Button_Clicked_2"/>
+
+        <Button Text="Problemas com o App" BackgroundColor="DeepSkyBlue" Grid.Row="4" Grid.Column="1" TextColor="Black" 
+                FontSize="12" BorderRadius="50" BorderColor="Black" BorderWidth="1" Clicked="Button_Clicked_3"/>
+
+        <Button Text="Alerta de segurança" BackgroundColor="MidnightBlue" Grid.Row="5" Grid.Column="0" TextColor="White" 
+                FontSize="12" BorderRadius="50" BorderColor="Black" BorderWidth="1" Clicked="Button_Clicked_4"/>
+
+        <Button Text="Cancelar" Grid.Row="7" BackgroundColor="LightGray" Grid.Column="0" TextColor="Black" FontSize="14" 
+                BorderRadius="50" BorderColor="Black"  BorderWidth="1" Clicked="Button_Clicked_5"/>
+
+        
+    </Grid>
+
+</ContentPage>

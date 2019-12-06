@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:converters="clr-namespace:CadeMeuBus.Converters"
+             x:Class="CadeMeuBus.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            
+
+
+            <converters:NumeroParaImagem x:Key="CardConverter"
+                                                    MasterCard="ic_mastercard.png" 
+                                                    Visa="ic_visa.png"
+                                                    NotRecognized="nocards.png"/>
+
+            <converters:NumeroParaImagem x:Key="CardLightConverter"
+                                                    MasterCard="ic_mastercard_white.png" 
+                                                    Visa="ic_visa_white.png"
+                                                    NotRecognized="ic_chip.png"/>
+
+            <converters:NumeroParaCor x:Key="CardColorConverter"
+                                                    MasterCard="#394854" 
+                                                    Visa="#2867BA"
+                                                    NotRecognized="#75849D"/>
+
+            <Color x:Key="Primary">#E5E9EE</Color>
+            <Color x:Key="PrimaryDark">#75849D</Color>
+            <Color x:Key="Secondary">#B5BBC2</Color>
+            <Color x:Key="Accent">LightGray</Color>
+            <Color x:Key="LightColor">LightGray</Color>
+
+            <Style  x:Key="HeaderMenuLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="20"/>
+            </Style>
+            <Style x:Key="MenuLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="24"/>
+            </Style>
+
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>

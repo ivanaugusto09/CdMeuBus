@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
+             xmlns:enumVal="clr-namespace:CadeMeuBus.Helper"
+             xmlns:local="clr-namespace:CadeMeuBus"
+             mc:Ignorable="d"
+             Title="Cadê Meu Bus"
+             NavigationPage.HasNavigationBar="false"
+             x:Class="CadeMeuBus.CdMeuBus">
+
+
+    <Grid RowSpacing="0" x:Name="layout" VerticalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0"
+              Grid.RowSpan="2"
+              ColumnSpacing="0"
+              RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+
+
+        <maps:Map x:Name="map" 
+                  Grid.Row="0"
+                  VerticalOptions="FillAndExpand" 
+                  IsShowingUser="true">
+
+        </maps:Map>
+
+
+            <local:Linha IsVisible="True"
+                                    Grid.Row="1">
+                <local:Linha.Triggers>
+                    <DataTrigger TargetType="local:Linha"
+                                         Binding="{Binding PageStatusEnum}"
+                                         Value="ShowingRoute">
+                        <Setter Property="IsVisible" Value="True"/>
+                    </DataTrigger>
+                </local:Linha.Triggers>
+            </local:Linha>
+
+
+
+
+        </Grid>
+
+        <Image Source="ic_menu.png"
+               x:Name="menuIcon"
+               IsVisible="True"
+               VerticalOptions="Start"
+               HorizontalOptions="Start"
+               Margin="20,20,20,0"
+               HeightRequest="30"
+               WidthRequest="30"
+               Grid.Row="0"
+               Grid.RowSpan="2">
+            <Image.Triggers>
+                <DataTrigger TargetType="Image"
+                             Binding="{Binding PageStatusEnum}"
+                             Value="Default">
+                    <Setter Property="IsVisible" Value="True"/>
+                </DataTrigger>
+            </Image.Triggers>
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+            </Image.GestureRecognizers>
+        </Image>
+
+    </Grid>
+</ContentPage>

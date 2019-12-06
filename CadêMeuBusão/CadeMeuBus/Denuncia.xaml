@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Cadê Meu Busão"
+             x:Class="CadeMeuBus.Denuncia">
+    
+    
+    <Grid BackgroundColor="DeepSkyBlue" RowSpacing="15" ColumnSpacing="25" Padding="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition   Width="120"/>
+            <ColumnDefinition   Width="*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <Image Source="logo.png" Grid.RowSpan="2"   Grid.ColumnSpan="1"/>
+
+        <Label FontSize="24" FontAttributes="Bold" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+               Grid.RowSpan="2"   Grid.Column="1" Text="Denúncias sobre o transporte público"/>
+
+        <Label Text="Sua Denúncia:" FontSize="14" FontAttributes="Bold" Grid.Column="0" Grid.Row="2"/>
+        <Entry x:Name="nome" Keyboard="Default" MaxLength="40" Grid.ColumnSpan="2" Grid.Row="3"
+Placeholder="Sua Denúncia" IsPassword="false" />
+
+        <Label Text="Linha de Ônibus:" FontSize="14" FontAttributes="Bold" Grid.ColumnSpan="2" Grid.Row="4"/>
+        <Entry x:Name="Linha" Keyboard="Default" MaxLength="15" Grid.ColumnSpan="2" Grid.Row="5"
+Placeholder="Linha"  IsPassword="false" />
+
+        <Label Text="Data" FontSize="14" FontAttributes="Bold" Grid.Column="0" Grid.Row="6"/>
+        <DatePicker x:Name="Data" MinimumDate="01/01/2019" Grid.ColumnSpan="2" Grid.Row="7"
+            MaximumDate="12/31/2019"
+            Format="dd/MM/yyyy"
+            DateSelected="Data_DateSelected"/>
+        <Label x:Name="lbldt" Grid.Column="0" Grid.Row="8"/>
+
+        <Button Text="Cancelar" Grid.Row="9" BackgroundColor="LightGray" Grid.Column="0" TextColor="Black" FontSize="14" 
+                BorderRadius="50" BorderColor="Black"  BorderWidth="1" Clicked="Button_Clicked"/>
+
+        <Button Text="Próximo" Grid.Row="9" BackgroundColor="MediumSeaGreen" Grid.Column="1" TextColor="White" FontSize="14" 
+                BorderRadius="50" BorderColor="Black" BorderWidth="1" Clicked="Button_Clicked_1" IsEnabled="True"/>
+
+
+    </Grid>
+
+</ContentPage>
